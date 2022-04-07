@@ -15,7 +15,7 @@ function createTimeblocks()
     var timeblocks = $(".time-block"); // Select all timeblocks
     timeblocks.append($("<p>").addClass("col-1 hour").text("A"));
     timeblocks.append($("<textarea>").addClass("col-10"));
-    timeblocks.append($("<button>").addClass("col-1 saveBtn").text("Save"));
+    timeblocks.append($("<button>").addClass("col-1 saveBtn").html("<i>💾</i>"));
 
     // Set the proper time value for each timeblock
     $(".hour").each(function(_i, el)
