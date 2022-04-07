@@ -21,7 +21,10 @@ function createTimeblocks()
     $(".time-block p").each(function(_i, el)
     {
         el = $(el);
-        el.text(el.parent().data("startingHour"));
+        var timeLabel = el.parent().data("startingHour");
+        timeLabel = moment().startOf("day").add(timeLabel, "hours");
+        timeLabel = timeLabel.format("h A");
+        el.text(timeLabel);
     });
 }
 
