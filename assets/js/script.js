@@ -50,4 +50,11 @@ function createTimeblocks()
     });
 }
 
+timeblocksEl.on("click", "button", function(event)
+{
+    var startingHour = $(this).parent().data("startingHour");
+    var textToSave = $(this).siblings("textarea").val();
+    window.localStorage.setItem("OneDayPlanner:" + startingHour, textToSave);
+});
+
 createTimeblocks();
