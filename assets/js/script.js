@@ -16,6 +16,13 @@ function createTimeblocks()
     timeblocks.append($("<p>").addClass("col-1").text("A"));
     timeblocks.append($("<textarea>").addClass("col-10"));
     timeblocks.append($("<button>").addClass("col-1 saveBtn").text("Save"));
+
+    // Set the proper time value for each timeblock
+    $(".time-block p").each(function(_i, el)
+    {
+        el = $(el);
+        el.text(el.parent().data("startingHour"));
+    });
 }
 
 createTimeblocks();
