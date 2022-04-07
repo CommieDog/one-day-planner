@@ -50,6 +50,21 @@ function createTimeblocks()
     });
 }
 
+function loadTimeblocksEventText()
+{
+    $(".time-block textarea").each(function(_i, el)
+    {
+        el = $(el);
+        var textToLoad = el.parent().data("startingHour");
+        textToLoad = "OneDayPlanner:" + textToLoad;
+        textToLoad = window.localStorage.getItem(textToLoad);
+        if(textToLoad !== null)
+        {
+            el.val(textToLoad);
+        }
+    });
+}
+
 timeblocksEl.on("click", "button", function(event)
 {
     var startingHour = $(this).parent().data("startingHour");
@@ -58,3 +73,4 @@ timeblocksEl.on("click", "button", function(event)
 });
 
 createTimeblocks();
+loadTimeblocksEventText();
