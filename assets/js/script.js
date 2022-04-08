@@ -3,6 +3,9 @@ const timeblocksEl = $("#timeblocks");
 
 currentDayEl.text(moment().format("dddd, MMMM Do, YYYY"));
 
+/**
+ * Dynamically generate the timeblock elements and insert them into the document
+ */
 function createTimeblocks()
 {
     for(var i = 9; i <= 17; i++) // Iterate through the hours of the workday
@@ -50,6 +53,9 @@ function createTimeblocks()
     });
 }
 
+/**
+ * Loads the saved timeblock user-entered text from local storage
+ */
 function loadTimeblocksEventText()
 {
     $(".time-block textarea").each(function(_i, el)
@@ -65,6 +71,9 @@ function loadTimeblocksEventText()
     });
 }
 
+/**
+ * Saves the corresponding timeblock's user-entered text content into local storage
+ */
 timeblocksEl.on("click", "button", function(event)
 {
     var startingHour = $(this).parent().data("startingHour");
