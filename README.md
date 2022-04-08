@@ -6,9 +6,9 @@ A webpage for organizing and displaying a daily work schedule
 
 The One Day Planner is a webpage used to organize and plan the current workday's activities. The page is color-coded so users can easily see where they stand on the day's schedule. The planner also has room to write notes, and these notes are stored locally so that users can return to them afterwards.
 
-![Screencapture of planner showing data persistance.](https://github.com/CommieDog/javascript-gauntlet/blob/main/assets/images/readme/one-day-planner-screencap.gif)
+![Screencapture of planner showing data persistance.](https://github.com/CommieDog/one-day-planner/blob/main/assets/images/readme/one-day-planner-screencap.gif)
 
-A sample deployment of the website is available on [GitHub Pages](https://commiedog.github.io/javascript-gauntlet/).
+A sample deployment of the website is available on [GitHub Pages](https://commiedog.github.io/one-day-planner/).
 
 
 ## Table of Contents
